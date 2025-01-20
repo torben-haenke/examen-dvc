@@ -1,6 +1,7 @@
 import pandas as pd
 
 from sklearn.ensemble import HistGradientBoostingRegressor
+from sklearn.model_selection import GridSearchCV
 
 import json
 
