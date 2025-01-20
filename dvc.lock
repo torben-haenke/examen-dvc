@@ -72,3 +72,27 @@ stages:
       hash: md5
       md5: 92c427fe70da0a086be0db0f8fdea1ea
       size: 98
+  train_model:
+    cmd: python ./src/models/train_model.py
+    deps:
+    - path: ./data/processed_data/X_train_scaled.csv
+      hash: md5
+      md5: e46ceb2260afb8869276c05a2348a2a5
+      size: 219188
+    - path: ./data/processed_data/y_train.csv
+      hash: md5
+      md5: dc57b289b5e16003c70ec422c6281f1d
+      size: 30258
+    - path: ./models/best_hgboost_params.json
+      hash: md5
+      md5: 92c427fe70da0a086be0db0f8fdea1ea
+      size: 98
+    - path: ./src/models/train_model.py
+      hash: md5
+      md5: 6a320fb63bb3c5454df2e75b83bbd1f4
+      size: 913
+    outs:
+    - path: ./models/optimized_hgboost_model.joblib
+      hash: md5
+      md5: 9c514a5114c7c718c347d646e5da64f7
+      size: 675216
