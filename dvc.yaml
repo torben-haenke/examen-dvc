@@ -48,4 +48,6 @@ stages:
     - ./src/models/evaluate_model.py
     outs:
     - ./data/predictions/hgboost_predictions.csv
-    - ./metrics/hgboost_metrics.json
+    metrics:
+    - ./metrics/hgboost_metrics.json:
+        cache: false
