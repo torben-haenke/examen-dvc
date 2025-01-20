@@ -5,8 +5,8 @@ stages:
     deps:
     - path: ./data/raw_data/raw.csv
       hash: md5
-      md5: 617b56af2992376d5c3e91ad80823898
-      size: 333757
+      md5: 5edad7684078f12d26af73db0b8e1511
+      size: 333758
     - path: ./src/data/train_test_split.py
       hash: md5
       md5: d123dd23c455c4782dc39f6e8170ca2c
