@@ -96,3 +96,27 @@ stages:
       hash: md5
       md5: 9c514a5114c7c718c347d646e5da64f7
       size: 675216
+  evaluate_model:
+    cmd: python ./src/models/evaluate_model.py
+    deps:
+    - path: ./data/processed_data/X_test_scaled.csv
+      hash: md5
+      md5: e7465ebedc5c61082439a456a9bf3b86
+      size: 73318
+    - path: ./data/processed_data/y_test.csv
+      hash: md5
+      md5: 6e30bd7cb4ff44ea23e42ece38e35893
+      size: 10126
+    - path: ./models/optimized_hgboost_model.joblib
+      hash: md5
+      md5: 9c514a5114c7c718c347d646e5da64f7
+      size: 675216
+    - path: ./src/models/evaluate_model.py
+      hash: md5
+      md5: 44b6b8ea5b4d7a284968d3170f318942
+      size: 1122
+    outs:
+    - path: ./data/predictions/hgboost_predictions.csv
+      hash: md5
+      md5: f79d318383861613dc5f3d96c0762442
+      size: 10522
