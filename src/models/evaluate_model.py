@@ -4,7 +4,6 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 import json
-
 from joblib import load
 
 X_test = pd.read_csv('data/processed_data/X_test_scaled.csv', index_col = 0)

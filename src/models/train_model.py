@@ -1,11 +1,8 @@
 import pandas as pd
 
 from sklearn.ensemble import HistGradientBoostingRegressor
-from sklearn.model_selection import GridSearchCV, train_test_split
-from sklearn.metrics import mean_squared_error
 
 import json
-
 from joblib import dump
 
 # this is somehow redundent, it should look like the same as in gridsearch.py

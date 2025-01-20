@@ -30,7 +30,6 @@ gridsearch.fit(X_train, y_train)
 
 # Show the best parameters and score
 print("Best parameters:", gridsearch.best_params_)
-print("Best negative mean squared error:", gridsearch.best_score_)
 
 # Save the best parameters to a JSON file
 # here I decided not to use pkl file, since I would like to able to read the output in an editor

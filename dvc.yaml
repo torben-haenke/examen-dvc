@@ -9,8 +9,9 @@ stages:
     - ./data/processed_data/X_train.csv
     - ./data/processed_data/y_test.csv
     - ./data/processed_data/y_train.csv
+
   normalize:
-    cmd: python ./src/data/normalize.py --force
+    cmd: python ./src/data/normalize.py
     deps:
     - ./data/processed_data/X_test.csv
     - ./data/processed_data/X_train.csv
@@ -18,6 +19,7 @@ stages:
     outs:
     - ./data/processed_data/X_test_scaled.csv
     - ./data/processed_data/X_train_scaled.csv
+
   gridsearch:
     cmd: python ./src/models/gridsearch.py
     deps:
@@ -26,6 +28,7 @@ stages:
     - ./src/models/gridsearch.py
     outs:
     - ./models/best_hgboost_params.json
+
   train_model:
     cmd: python ./src/models/train_model.py
     deps:
@@ -35,6 +38,7 @@ stages:
     - ./src/models/train_model.py
     outs:
     - ./models/optimized_hgboost_model.joblib
+
   evaluate_model:
     cmd: python ./src/models/evaluate_model.py
     deps:

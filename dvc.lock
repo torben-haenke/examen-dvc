@@ -9,8 +9,8 @@ stages:
       size: 333757
     - path: ./src/data/train_test_split.py
       hash: md5
-      md5: cd56c34d11720abff994f357129f68d5
-      size: 708
+      md5: d123dd23c455c4782dc39f6e8170ca2c
+      size: 709
     outs:
     - path: ./data/processed_data/X_test.csv
       hash: md5
@@ -41,8 +41,8 @@ stages:
       size: 202350
     - path: ./src/data/normalize.py
       hash: md5
-      md5: b509d29485103b0413f9c9712ab963e4
-      size: 927
+      md5: 549d064d9fe51ce95fcda0fd9a25f901
+      size: 928
     outs:
     - path: ./data/processed_data/X_test_scaled.csv
       hash: md5
@@ -65,8 +65,8 @@ stages:
       size: 30258
     - path: ./src/models/gridsearch.py
       hash: md5
-      md5: 7884ba629d6101c48bf70454c4143905
-      size: 1414
+      md5: fdf2bbada0a1af0ddf768b68b4ba279c
+      size: 1347
     outs:
     - path: ./models/best_hgboost_params.json
       hash: md5
@@ -89,8 +89,8 @@ stages:
       size: 98
     - path: ./src/models/train_model.py
       hash: md5
-      md5: 6a320fb63bb3c5454df2e75b83bbd1f4
-      size: 913
+      md5: 01aba473dce48c0b01b101de730d2672
+      size: 798
     outs:
     - path: ./models/optimized_hgboost_model.joblib
       hash: md5
@@ -113,10 +113,14 @@ stages:
       size: 675216
     - path: ./src/models/evaluate_model.py
       hash: md5
-      md5: 44b6b8ea5b4d7a284968d3170f318942
-      size: 1122
+      md5: 22c79714cda3f5750d650183a3de6505
+      size: 1121
     outs:
     - path: ./data/predictions/hgboost_predictions.csv
       hash: md5
       md5: f79d318383861613dc5f3d96c0762442
       size: 10522
+    - path: ./metrics/hgboost_metrics.json
+      hash: md5
+      md5: 1072eda64ea553b75207ce37c92a3221
+      size: 80

@@ -1,4 +1,5 @@
 import pandas as pd
+
 from sklearn.preprocessing import StandardScaler
 
 X_train = pd.read_csv('data/processed_data/X_train.csv', index_col = 0)
